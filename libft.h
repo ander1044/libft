@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:59:48 by anben             #+#    #+#             */
-/*   Updated: 2019/06/04 14:54:46 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/05 09:48:54 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,8 @@ char				*ft_strnstr(const char *s1, const char *s2, size_t len);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strnew(size_t size);
+char				*ft_strsub(char const *s, unsigned int start, size_t len);
+char				*ft_strjoin(char const *s1, char const *s2);
 void				ft_putstr(char *str);
 void				ft_putnbr(int nbr);
 void				ft_putchar(char c);
