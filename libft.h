@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:59:48 by anben             #+#    #+#             */
-/*   Updated: 2019/06/05 09:48:54 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/06 10:58:17 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,8 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_strnequ(char const *s1, char const *s2, size_t n);
 int					ft_strequ(char const *s1, char const *s2);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
+int					ft_atoi(const char *str);
+char				*ft_itoa(int n);
 char				*ft_strstr(const char *s1, const char *s2);
 char				*ft_strncpy(char *dest, const char *src, size_t len);
 char				*ft_strncat(char *dest, const char *src, size_t n);
@@ -50,6 +52,8 @@ char				*ft_strrchr(const char *s, int c);
 char				*ft_strnew(size_t size);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
+char				*ft_strmap(char const *s, char (*f)(char));
+char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_putstr(char *str);
 void				ft_putnbr(int nbr);
 void				ft_putchar(char c);

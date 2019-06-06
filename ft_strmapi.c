@@ -1,39 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/05/30 12:33:30 by anben             #+#    #+#             */
-/*   Updated: 2019/06/06 11:02:41 by anben            ###   ########.fr       */
+/*   Created: 2019/06/06 10:20:31 by anben             #+#    #+#             */
+/*   Updated: 2019/06/06 10:48:18 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_itoa(int n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *str;
-	int i;	
+	size_t		n;
+	int			i;
+	char		*str;
+	char		*st1;
 
 	i = 0;
-	if (!(str = (char *)ft_memalloc(sizeof(char) * 2)))
+	st1 = (char *)s;
+	str = (char *)ft_memalloc(sizeof(char) * (ft_strlen(st1)) + 1);
+	if (str == NULL || st1 == NULL)
 		return (NULL);
-	if (n == -2147483648)
-		return (ft_strcpy(str, "-2147483648"));
-	if (n < i)
+	n = ft_strlen(st1);
+	//if (!(str = (ft_strnew(n))))
+		//return (NULL);
+	while (st1[i])
 	{
-		str[0] = '-';
-		str[1] = '\0';
-		str = ft_strjoin(str, ft_itoa(-n));
-	}
-	else if (n >= 10)
-		str = ft_strjoin(ft_itoa(n / 10), ft_itoa(n % 10));
-	else if (n < 10 && n >= 0)
-	{
-		str[0] = n + '0';
-		str[1] = '\0';
+		str[i] = f(i, st1[i]);
+		i++;
+		st1++;
 	}
 	return (str);
 }
