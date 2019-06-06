@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 12:47:31 by anben             #+#    #+#             */
-/*   Updated: 2019/06/04 15:13:44 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/06 13:53:45 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,8 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	dst_n = 0;
 	src_n = 0;
 	src1 = (char *)src;
+	if (src1 == NULL)
+		return (dstsize + ft_strlen(src1));
 	while (dst[dst_n] && dst_n < dstsize)
 		dst++;
 	while ((src[src_n]) && (dst_n + 1) < dstsize)
