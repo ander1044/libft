@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 10:51:07 by anben             #+#    #+#             */
-/*   Updated: 2019/06/07 12:33:09 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/07 17:12:07 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,6 +32,7 @@ int static	firstchar(char *s, char *spaces)
 	}
 	return (count);
 }
+
 int static lastchar(char *s, char *spaces)
 {
 	int count;
@@ -54,6 +55,7 @@ int static lastchar(char *s, char *spaces)
 	}
 	return (count);
 }
+
 char	*ft_strtrim(char const *s)
 {
 	char	*newstr;
