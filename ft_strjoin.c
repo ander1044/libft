@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 09:04:31 by anben             #+#    #+#             */
-/*   Updated: 2019/06/06 09:54:30 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/07 12:34:36 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	st1 = (char *)s1;
 	st2 = (char *)s2;
 	n = ft_strlen(st1) + ft_strlen(st2);
-	str = (char *)ft_memalloc(sizeof(*str) *(n + 1));
+	str = (char *)ft_memalloc(sizeof(*str) * (n + 1));
 	if (str == NULL)
 		return (NULL);
 	ft_strcpy(str, st1);

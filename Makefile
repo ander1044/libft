@@ -6,7 +6,7 @@
 #    By: anben <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/30 16:32:54 by anben             #+#    #+#              #
-#    Updated: 2019/06/06 14:03:29 by anben            ###   ########.fr        #
+#    Updated: 2019/06/07 12:28:53 by anben            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,7 +66,8 @@ SRC = ft_isdigit.c\
 	  ft_strmap.c\
 	  ft_strmapi.c\
 	  ft_itoa.c\
-	  ft_strsplit.c
+	  ft_strsplit.c\
+	  ft_strtrim.c
 
 OBJ = ft_isdigit.o\
 	  ft_memcmp.o\
@@ -119,7 +120,8 @@ OBJ = ft_isdigit.o\
 	  ft_strmap.o\
 	  ft_strmapi.o\
 	  ft_itoa.o\
-	  ft_strsplit.o
+	  ft_strsplit.o\
+	  ft_strtrim.o
 
 # all: $(NAME)
 

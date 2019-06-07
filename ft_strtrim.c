@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 10:51:07 by anben             #+#    #+#             */
-/*   Updated: 2019/06/07 10:53:29 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/07 12:33:09 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,7 @@ char	*ft_strtrim(char const *s)
 	str = (char *)s;
 	if (!str)
 		return (NULL);
-	len = ft_strlen(s);
+	len = ft_strlen(str);
 	spacecount = firstchar(str, " \n\t");
 	start = spacecount;
 	if (len > spacecount)

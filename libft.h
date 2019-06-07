@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:59:48 by anben             #+#    #+#             */
-/*   Updated: 2019/06/07 10:53:55 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/07 12:29:40 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int					ft_strequ(char const *s1, char const *s2);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
 int					ft_atoi(const char *str);
 char				*ft_itoa(int n);
-char				*ft_strtrim(char const *s)
+char				*ft_strtrim(char const *s);
 char				**ft_strsplit(const char *str, char c);
 char				*ft_strstr(const char *s1, const char *s2);
 char				*ft_strncpy(char *dest, const char *src, size_t len);
