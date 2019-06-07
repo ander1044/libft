@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 12:47:31 by anben             #+#    #+#             */
-/*   Updated: 2019/06/06 13:53:45 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/07 13:29:13 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,23 +14,27 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	dst_n;
-	size_t	src_n;
+	size_t	i;
+	size_t	j;
 	char	*src1;
 
-	dst_n = 0;
-	src_n = 0;
+	i = 0;
 	src1 = (char *)src;
-	if (src1 == NULL)
+	while (i < dstsize && dst[i])
+		i++;
+	if (dstsize == i)
 		return (dstsize + ft_strlen(src1));
-	while (dst[dst_n] && dst_n < dstsize)
-		dst++;
-	while ((src[src_n]) && (dst_n + 1) < dstsize)
+	j = 0;
+	while (dstsize > (i + j + 1) && src[j])
 	{
-		dst[dst_n + src_n] = src[src_n];
-		src_n++;
+		dst[i + j] = src[j];
+		j++;
 	}
-	if (dst_n != dstsize)
-		dst[dst_n + src_n] = '\0';
-	return (dst_n + ft_strlen(src1));
+	dst[i + j] = '\0';
+	if (dstsize == (i + j + 1))
+	{
+		while (src[j])
+			j++;
+	}
+	return (i + j);
 }

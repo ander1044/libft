@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 12:33:30 by anben             #+#    #+#             */
-/*   Updated: 2019/06/06 11:02:41 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/07 13:43:19 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_itoa(int n)
 {
-	char *str;
-	int i;	
+	char	*str;
+	int		i;
 
 	i = 0;
 	if (!(str = (char *)ft_memalloc(sizeof(char) * 2)))

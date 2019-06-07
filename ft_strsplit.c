@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 13:58:40 by anben             #+#    #+#             */
-/*   Updated: 2019/06/06 16:09:08 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/07 13:49:27 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ static	char	*ft_word(const char *str, char c, int *i)
 	return (s);
 }
 
-char			**ft_strsplit(const char *str, char c)
+char	**ft_strsplit(const char *str, char c)
 {
 	int		i;
 	int		j;

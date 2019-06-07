@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/05 10:38:07 by anben             #+#    #+#             */
-/*   Updated: 2019/06/06 11:23:58 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/07 13:43:33 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,29 +14,24 @@
 
 int	ft_atoi(const char *str)
 {
-	size_t result;
-	size_t sign;
-	size_t multiplier;
-	size_t i;
+	int	result;
+	int	sign;
+	int i;
 
-	result = 0;
-	sign = 0;
-	multiplier = 10;
 	i = 0;
-	while (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
-			str[i] == '\r' || str[i] == '\v' || str[i] == '\f' || str[i] == 32)
+	sign = 1;
+	result = 0;
+	while (str[i] && (str[i] == ' ' || str[i] == '\n' || str[i] == '\t' ||
+			str[i] == '\v' || str[i] == '\f' || str[i] == '\r'))
 		i++;
 	if (str[i] == '-')
 		sign = -1;
-	else
-		sign = 1;
-	if (str[i] == '-' || str[i] == '+')
+	if (str[i] == '-' || *str == '+')
 		i++;
-	while (str[i] != '\0')
+	while (str[i] && str[i] >= '0' && str[i] <= '9')
 	{
-		if (str[i] >= '0' || str[i] <= '9')
-			result = result * multiplier + str[i] - '0';
+		result = result * 10 + (str[i] - 48);
 		i++;
 	}
-	return (sign * result);
+	return (result * sign);
 }
