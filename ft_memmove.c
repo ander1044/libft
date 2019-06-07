@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/25 13:29:18 by anben             #+#    #+#             */
-/*   Updated: 2019/06/06 16:06:36 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/07 14:26:20 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,13 @@ void	*ft_memmove(void *dest, const void *src, size_t len)
 		return (NULL);
 	while (i < len)
 	{
-		dpos[i] = spos[i];
+		str[i] = spos[i];
+		i++;
+	}
+	i = 0;
+	while (i < len)
+	{
+		dpos[i] = str[i];
 		i++;
 	}
 	return (dest);

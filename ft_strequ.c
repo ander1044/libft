@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 11:20:57 by event             #+#    #+#             */
-/*   Updated: 2019/06/07 14:02:25 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/07 14:09:46 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,14 @@ int	ft_strequ(char const *s1, char const *s2)
 		return (0);
 	while (st1[i])
 	{
-		if (st1[i] != st2[i])
+		if (st1[i] == st2[i])
+		{
 			i++;
-		return (0);
+		}
+		else
+		{
+			return (0);
+		}
 	}
 	if (st1 == st2 && st2 != '\0')
 		return (1);
