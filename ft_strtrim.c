@@ -6,13 +6,13 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 10:51:07 by anben             #+#    #+#             */
-/*   Updated: 2019/06/07 17:12:07 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/09 13:59:25 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int static	firstchar(char *s, char *spaces)
+static int		firstchar(char *s, char *spaces)
 {
 	int count;
 	int tmp;
@@ -33,10 +33,10 @@ int static	firstchar(char *s, char *spaces)
 	return (count);
 }
 
-int static lastchar(char *s, char *spaces)
+static int		lastchar(char *s, char *spaces)
 {
 	int count;
-	int	len;
+	int len;
 	int i;
 	int tmp;
 
@@ -56,23 +56,23 @@ int static lastchar(char *s, char *spaces)
 	return (count);
 }
 
-char	*ft_strtrim(char const *s)
+char			*ft_strtrim(char const *s)
 {
 	char	*newstr;
 	int		len;
 	int		start;
-	int		spacecount;
+	int		spcount;
 	char	*str;
 
 	str = (char *)s;
 	if (!str)
 		return (NULL);
 	len = ft_strlen(str);
-	spacecount = firstchar(str, " \n\t");
-	start = spacecount;
-	if (len > spacecount)
-		spacecount += lastchar(str, " \n\t");
-	len -= spacecount;
+	spcount = firstchar(str, " \n\t");
+	start = spcount;
+	if (len > spcount)
+		spcount += lastchar(str, " \n\t");
+	len -= spcount;
 	if (!(newstr = ft_memalloc((size_t)len + 1)))
 		return (NULL);
 	newstr = ft_strncpy(newstr, (char*)str + start, len);
