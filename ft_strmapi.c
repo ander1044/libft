@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/06 10:20:31 by anben             #+#    #+#             */
-/*   Updated: 2019/06/06 11:45:19 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/10 14:43:25 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,9 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 
 	i = 0;
 	st1 = (char *)s;
-	str = (char *)ft_memalloc(sizeof(char) * (ft_strlen(st1)) + 1);
-	if (str == NULL)
+	if (!s || !f)
+		return (NULL);
+	if (!(str = (char *)malloc(sizeof(char) * ft_strlen(st1) + 1)))
 		return (NULL);
 	if (str == NULL && st1 == NULL)
 		return (NULL);

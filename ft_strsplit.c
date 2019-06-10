@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 16:43:44 by anben             #+#    #+#             */
-/*   Updated: 2019/06/07 17:18:06 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/10 14:27:04 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,6 +65,8 @@ char				**ft_strsplit(const char *str, char c)
 	j = 0;
 	wrd = ft_count_words(str, c);
 	if (!(s = (char **)malloc(sizeof(s) * (ft_count_words(str, c) + 2))))
+		return (NULL);
+	if (str == NULL)
 		return (NULL);
 	while (str[i] == c && str[i])
 		i++;
