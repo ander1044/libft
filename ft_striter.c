@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 10:42:53 by event             #+#    #+#             */
-/*   Updated: 2019/06/04 11:39:40 by event            ###   ########.fr       */
+/*   Updated: 2019/06/12 11:19:19 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striter(char *s, void (*f)(char *))
 
 	str = (char *)s;
 	i = 0;
-	if (str == NULL)
+	if (s == NULL || f == NULL)
 		return ;
 	while (str[i])
 	{

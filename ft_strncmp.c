@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 14:14:37 by anben             #+#    #+#             */
-/*   Updated: 2019/06/10 15:06:13 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/12 12:02:03 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 		return (0);
 	if (st1 == NULL && st2 == NULL)
 		return (0);
-	while (st1[i] && st2[i] && st1[i] == st2[i] && i < n)
+	while (st1[i] && st2[i] && st1[i] == st2[i] && --n)
 		i++;
 	return (st1[i] - st2[i]);
 }

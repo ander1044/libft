@@ -6,7 +6,7 @@
 /*   By: event <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/04 10:59:24 by event             #+#    #+#             */
-/*   Updated: 2019/06/04 11:40:26 by event            ###   ########.fr       */
+/*   Updated: 2019/06/12 11:21:49 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 
 	str = (char *)s;
 	i = 0;
-	if (str == NULL)
+	if (s == NULL || f == NULL)
 		return ;
 	while (str[i])
 	{
