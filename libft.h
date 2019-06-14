@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:59:48 by anben             #+#    #+#             */
-/*   Updated: 2019/06/11 15:40:09 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/14 12:10:54 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_isprint(int c);
 int					ft_strcmp(const char *s1, const char *s2);
-int					ft_strlen(char *str);
+int					ft_strlen(const char *str);
 int					ft_isdigit(int c);
 int					ft_isascii(int c);
 int					ft_isalpha(int c);
