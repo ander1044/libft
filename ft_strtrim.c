@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/06/07 10:51:07 by anben             #+#    #+#             */
-/*   Updated: 2019/06/09 13:59:25 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/21 16:09:26 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,6 +76,6 @@ char			*ft_strtrim(char const *s)
 	if (!(newstr = ft_memalloc((size_t)len + 1)))
 		return (NULL);
 	newstr = ft_strncpy(newstr, (char*)str + start, len);
-	newstr[len + 1] = '\0';
+	newstr[len] = '\0';
 	return (newstr);
 }
