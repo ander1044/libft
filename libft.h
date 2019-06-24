@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:59:48 by anben             #+#    #+#             */
-/*   Updated: 2019/06/14 12:10:54 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/24 15:27:07 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,7 +27,7 @@ int					ft_toupper(int c);
 int					ft_tolower(int c);
 int					ft_isprint(int c);
 int					ft_strcmp(const char *s1, const char *s2);
-int					ft_strlen(const char *str);
+size_t				ft_strlen(const char *str);
 int					ft_isdigit(int c);
 int					ft_isascii(int c);
 int					ft_isalpha(int c);
@@ -44,7 +44,7 @@ char				*ft_strstr(const char *s1, const char *s2);
 char				*ft_strncpy(char *dest, const char *src, size_t len);
 char				*ft_strncat(char *dest, const char *src, size_t n);
 char				*ft_strdup(const char *s);
-char				*ft_strcpy(char *dest, char *src);
+char				*ft_strcpy(char *dest, const char *src);
 char				*ft_strcat(char *dest, const char *src);
 char				*ft_strnstr(const char *s1, const char *s2, size_t len);
 char				*ft_strchr(const char *s, int c);
@@ -54,7 +54,7 @@ char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strmap(char const *s, char (*f)(char));
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
-void				ft_putstr(char *str);
+void				ft_putstr(const char *str);
 void				ft_putnbr(int nbr);
 void				ft_putchar(char c);
 void				*ft_memset(void *b, int c, size_t len);

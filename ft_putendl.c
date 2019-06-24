@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/30 16:22:07 by anben             #+#    #+#             */
-/*   Updated: 2019/06/01 14:01:06 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/24 15:12:53 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,5 @@
 
 void	ft_putendl(const char *s)
 {
-	char *str;
-
-	str = (char *)s;
-	ft_putstr(str);
-	ft_putchar('\n');
+	ft_putendl_fd(s, 1);
 }
