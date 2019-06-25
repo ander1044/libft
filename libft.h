@@ -6,7 +6,7 @@
 /*   By: anben <marvin@42.fr>                       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/27 12:59:48 by anben             #+#    #+#             */
-/*   Updated: 2019/06/25 11:02:53 by anben            ###   ########.fr       */
+/*   Updated: 2019/06/25 12:19:04 by anben            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,10 +50,11 @@ char				*ft_strnstr(const char *s1, const char *s2, size_t len);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strnew(size_t size);
-char				ft_concasei(unsigned int n, char ch);
 char				*ft_strsub(char const *s, unsigned int start, size_t len);
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strmap(char const *s, char (*f)(char));
+char				ft_conmcase(char ch);
+char				ft_conmcasei(unsigned int n, char ch);
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void				ft_putstr(const char *str);
 void				ft_putnbr(int nbr);
@@ -63,6 +64,7 @@ void				*ft_memset(void *b, int c, size_t len);
 void				*ft_memmove(void *dest, const void *src, size_t len);
 void				*ft_memcpy(void *dest, const void *src, size_t n);
 void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
+void				ft_concasei(unsigned int n, char *ch);
 void				ft_bzero(void *s, size_t n);
 void				ft_putstr_fd(const char *s, int fd);
 void				ft_putnbr_fd(int nbr, int fd);

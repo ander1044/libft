@@ -6,7 +6,7 @@
 #    By: anben <marvin@42.fr>                       +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/30 16:32:54 by anben             #+#    #+#              #
-#    Updated: 2019/06/25 11:03:36 by anben            ###   ########.fr        #
+#    Updated: 2019/06/25 12:17:45 by anben            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,6 +69,8 @@ SRC = ft_isdigit.c\
 	  ft_strsplit.c\
 	  ft_strtrim.c\
 	  ft_concase.c\
+	  ft_conmcase.c\
+	  ft_conmcasei.c\
 	  ft_concasei.c
 
 OBJ = ft_isdigit.o\
@@ -125,6 +127,8 @@ OBJ = ft_isdigit.o\
 	  ft_strsplit.o\
 	  ft_strtrim.o\
 	  ft_concase.o\
+	  ft_conmcase.o\
+	  ft_conmcasei.o\
 	  ft_concasei.o
 
 # all: $(NAME)
